@@ -28,13 +28,13 @@ int main()
 	delete dog;
 	delete meta;
 
-	std::cout << "=== Non-virtual method ===\n";
+	std::cout << "\n=== Non-virtual method ===\n";
 	const WrongAnimal *wrong = new WrongCat();
 	assert(wrong->getType() == "WrongCat");
 	wrong->makeSound(); // Calls WrongAnimal::makeSound()
 	delete wrong;
 
-	std::cout << "=== Copies and assignment ===\n";
+	std::cout << "\n=== Copies and assignment ===\n";
 	Cat firstCat;
 	Cat copiedCat(firstCat);
 	Cat assignedCat;
